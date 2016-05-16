@@ -1,0 +1,171 @@
+<head>
+  <title>simple</title>
+</head>
+
+<body>
+</body>
+
+<template name="main">
+  <div class="container">
+    <div class="row">
+      <div class="col s4 m4 l8 offset-l2 center-align">
+        <a href="{{pathFor route='home'}}">
+          <h1 class="welcome white-text center-align">Glassy</h1>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="main-container grey lighten-5 col s4 m4 l8 offset-l2 center-align hoverable">
+        {{> yield}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="subtext grey-text text-lighten-2 col s4 m4 l6 offset-l3 center-align">
+        Glassy bietet Journalisten, Bloggern, Vloggern, Podcastern und vielen weiteren Personen der digitalen Öffentlichkeit die Möglichkeit, einfach und schnell einen Disclaimer zu erstellen und einzubinden.
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="one">
+<h1>Angaben zur Person</h1>
+<h2>Schritt 1 von 3</h2>
+<div class="divider"></div>
+<form>
+  <div class="spacer-top row">
+    <div class="input-field col s12 m12 l5 offset-l1 left-align">
+      <input id="first_name" type="text" class="validate" required>
+      <label for="first_name">Vorname</label>
+    </div>
+    <div class="input-field col s12 m12 l5 left-align">
+      <input id="last_name" type="text" class="validate" required>
+      <label for="last_name">Nachname</label>
+    </div>
+  </div>
+  <div class="row small">
+    <div class="input-field col s12 m12 l10 offset-l1 left-align">
+      <input id="job" type="text" class="validate" required>
+      <label for="job">Beruf</label>
+    </div>
+  </div>
+  <div class="row small">
+    <div class="input-field col s12 m12 l10 offset-l1 left-align">
+      <input id="email" type="email" class="validate" required>
+      <label for="email">E-Mail</label>
+    </div>
+  </div>
+  <div class="row small">
+    <div class="input-field col s12 m12 l10 offset-l1 left-align">
+      <input id="website" type="url" class="validate" required>
+      <label for="website">Website</label>
+    </div>
+  </div>
+  <div class="row small">
+    <div class="input-field col s12 m12 l10 offset-l1 left-align">
+      <input id="twitter" type="url" class="validate">
+      <label for="twitter">Twitter (optional)</label>
+    </div>
+  </div>
+  <div class="row">
+      <button class="spacer-top btn indigo waves-effect waves-light" type="submit" name="action">
+        Weiter
+      </button>
+  </div>
+  </form>
+  <div class="spacer-big row">
+    <div class="col s12 center-align">
+      <i class="material-icons">share</i>
+    </div>
+  </div>
+</template>
+
+<template name="two">
+<h1>Deine Verbindungen</h1>
+<h2>Schritt 2 von 3</h2>
+<div class="divider"></div>
+<div class="spacer-top row">
+  <div class="input-field col s12 m12 l10 offset-l1 left-align">
+    <input id="connection_name" type="text" class="validate">
+    <label for="connection_name">Name der Verbindung</label>
+  </div>
+  <div class="input-field col s12 m12 l10 offset-l1 left-align">
+    <input id="connection_type" type="text" class="validate">
+    <label for="connection_type">Art der Verbindung (z.B. Mitglied)</label>
+  </div>
+</div>
+<div class="row small">
+  <div class="input-field col s12 m12 l10 offset-l1 left-align">
+    <input id="connection_website" type="url" class="validate">
+    <label for="connection_website">Website</label>
+  </div>
+</div>
+<div class="row">
+  <a href="{{pathFor route='three'}}">
+    <button class="spacer-top btn indigo waves-effect waves-light" type="submit" name="action">
+      Weiter
+    </button>
+  </a>
+</div>
+<div class="spacer-big row">
+  <div class="col s12 center-align">
+    <i class="material-icons">share</i>
+  </div>
+</div>
+</template>
+
+<template name="three">
+<h1>Deine Publikationen</h1>
+<h2>Schritt 3 von 3</h2>
+<div class="divider"></div>
+<div class="spacer-top row">
+  <div class="input-field col s12 m12 l10 offset-l1 left-align">
+    <input id="last_name" type="text" class="validate">
+    <label for="last_name">Name der Publikation</label>
+  </div>
+  <div class="input-field col s12 m12 l10 offset-l1 left-align">
+    <input id="website" type="url" class="validate">
+    <label for="website">Website</label>
+  </div>
+  <a href="{{pathFor route='final'}}">
+    <button class="spacer-top btn indigo waves-effect waves-light" type="submit" name="action">
+      Weiter
+    </button>
+  </a>
+  <div class="row">
+    <div class="col s12 center-align">
+      <i class="material-icons">share</i>
+    </div>
+  </div>
+</div>
+</template>
+
+<template name="final">
+<h1>Voilà! Fertig.</h1>
+<h2>Hier sind deine Daten.</h2>
+<div class="divider"></div>
+<img src="Group.png" class="spacer-top">
+<div class="spacer-top row">
+  <div class="input-field col s12 m12 l10 offset-l1 left-align">
+    <span class="description">Binde folgenden Code auf deiner Website ein, um die Grafik anzuzeigen</span>
+    <textarea id="textarea1" class="materialize-textarea">
+      LALALALL
+      {{#each show}}
+        <h1>{{vorname}}</h1>
+        <h2>{{nachname}}</h2>
+        {{email}}
+        {{twitter}}
+      {{/each}}
+    </textarea>
+    <span class="description">Oder kopiere einfach folgenden Text</span>
+    <textarea id="textarea1" class="materialize-textarea">
+      Ich bin Mitglied bei XXX
+    </textarea>
+  </div>
+  <div class="divider"></div>
+  <div class="spacer-big row">
+    <div class="col s12 center-align">
+      <i class="material-icons">share</i>
+    </div>
+  </div>
+</div>
+</template>

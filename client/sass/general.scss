@@ -1,0 +1,33 @@
+// <3
+
+body {
+  background: url("bg_dark.jpg");
+  //@extend .indigo;
+  font-family: 'Fira Sans';
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 1em;
+  margin: 2em 0 .5em;
+}
+
+h2 {
+  font-size: .8em;
+  @extend .grey-text;
+  margin-top: .5em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+@media only screen and (max-width : 993px) {
+  .container {
+    width: 90%;
+  }
+}
+
+textarea {
+  @extend .grey-text;
+}
