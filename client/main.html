@@ -21,31 +21,28 @@
     </div>
     <div class="row">
       <div class="subtext grey-text text-lighten-2 col s4 m4 l6 offset-l3 center-align">
-        Glassy bietet Journalisten, Bloggern, Vloggern, Podcastern und vielen weiteren Personen der digitalen Öffentlichkeit die Möglichkeit, einfach und schnell einen Disclaimer zu erstellen und einzubinden.
+        Glassy provides journalists, bloggers, podcasters and any other people in the
+        digital public the opportunity to publish a self-disclosure quickly and easily.
       </div>
     </div>
   </div>
 </template>
 
 <template name="one">
-<h1>Angaben zur Person</h1>
-<h2>Schritt 1 von 3</h2>
+<h1>Personal Information</h1>
+<h2>Just two more steps to go.</h2>
 <div class="divider"></div>
 <form>
   <div class="spacer-top row">
-    <div class="input-field col s12 m12 l5 offset-l1 left-align">
-      <input id="first_name" type="text" class="validate" required>
-      <label for="first_name">Vorname</label>
-    </div>
-    <div class="input-field col s12 m12 l5 left-align">
-      <input id="last_name" type="text" class="validate" required>
-      <label for="last_name">Nachname</label>
+    <div class="input-field col s12 m12 l10 offset-l1 left-align">
+      <input id="name" type="text" class="validate" required>
+      <label for="name">Name</label>
     </div>
   </div>
   <div class="row small">
     <div class="input-field col s12 m12 l10 offset-l1 left-align">
       <input id="job" type="text" class="validate" required>
-      <label for="job">Beruf</label>
+      <label for="job">Job</label>
     </div>
   </div>
   <div class="row small">
@@ -67,9 +64,11 @@
     </div>
   </div>
   <div class="row">
+    <a href="{{pathFor route='two'}}">
       <button class="spacer-top btn indigo waves-effect waves-light" type="submit" name="action">
-        Weiter
+        Alright, next!
       </button>
+    </a>
   </div>
   </form>
   <div class="spacer-big row">
@@ -80,29 +79,31 @@
 </template>
 
 <template name="two">
-<h1>Deine Verbindungen</h1>
-<h2>Schritt 2 von 3</h2>
+<h1>Your Connections</h1>
+<h2>Such as memberships or any other activity which could influence your work.</h2>
 <div class="divider"></div>
 <div class="spacer-top row">
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
     <input id="connection_name" type="text" class="validate">
-    <label for="connection_name">Name der Verbindung</label>
+    <label for="connection_name">Name of connection</label>
   </div>
+</div>
+<div class="row small">
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
     <input id="connection_type" type="text" class="validate">
-    <label for="connection_type">Art der Verbindung (z.B. Mitglied)</label>
+    <label for="connection_type">Type of connection</label>
   </div>
 </div>
 <div class="row small">
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
     <input id="connection_website" type="url" class="validate">
-    <label for="connection_website">Website</label>
+    <label for="connection_website">Links</label>
   </div>
 </div>
 <div class="row">
   <a href="{{pathFor route='three'}}">
     <button class="spacer-top btn indigo waves-effect waves-light" type="submit" name="action">
-      Weiter
+      Take me to the finish!
     </button>
   </a>
 </div>
@@ -114,34 +115,38 @@
 </template>
 
 <template name="three">
-<h1>Deine Publikationen</h1>
-<h2>Schritt 3 von 3</h2>
+<h1>Your publications</h1>
+<h2>Where do you publish on the web? (You can leave this blank)</h2>
 <div class="divider"></div>
 <div class="spacer-top row">
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
     <input id="last_name" type="text" class="validate">
-    <label for="last_name">Name der Publikation</label>
+    <label for="last_name">Name of the publication</label>
   </div>
+</div>
+<div class="row small">
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
     <input id="website" type="url" class="validate">
-    <label for="website">Website</label>
+    <label for="website">Link</label>
   </div>
+</div>
+<div class="row">
   <a href="{{pathFor route='final'}}">
     <button class="spacer-top btn indigo waves-effect waves-light" type="submit" name="action">
-      Weiter
+      THAT'S IT!
     </button>
   </a>
-  <div class="row">
-    <div class="col s12 center-align">
-      <i class="material-icons">share</i>
-    </div>
+</div>
+<div class="spacer-big row">
+  <div class="col s12 center-align">
+    <i class="material-icons">share</i>
   </div>
 </div>
 </template>
 
 <template name="final">
-<h1>Voilà! Fertig.</h1>
-<h2>Hier sind deine Daten.</h2>
+<h1>Et Voilà! Here you go.</h1>
+<h2>Copy, paste and share your self-disclosure.</h2>
 <div class="divider"></div>
 <img src="Group.png" class="spacer-top">
 <div class="spacer-top row">

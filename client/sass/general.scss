@@ -1,21 +1,21 @@
 // <3
 
 body {
-  background: url("bg.jpg");
-  //@extend .indigo;
+  //background: url("back.jpg");
+  @extend .indigo;
   font-family: 'Fira Sans';
   font-size: 18px;
 }
 
 h1 {
-  font-size: 1em;
-  margin: 2em 0 .5em;
+  font-size: 1.25em;
+  margin: 2em 0 .4em;
 }
 
 h2 {
   font-size: .8em;
   @extend .grey-text;
-  margin-top: .5em;
+  margin-top: .4em;
 }
 
 strong {
