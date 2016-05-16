@@ -1,2 +1,2 @@
 # glassy
-Publish a private disclaimer in a few seconds.
+Publish private disclaimers within seconds.
