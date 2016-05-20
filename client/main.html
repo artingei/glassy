@@ -1,5 +1,6 @@
 <head>
   <title>simple</title>
+  <script src="clipboard.min.js"></script>
 </head>
 
 <body>
@@ -65,7 +66,7 @@
   </div>
   <div class="row">
     <a href="{{pathFor route='two'}}">
-      <button class="spacer-top btn indigo waves-effect waves-light" type="submit" name="action">
+      <button class="spacer-top btn grey darken-3 waves-effect waves-light" type="submit" name="action">
         Alright, next!
       </button>
     </a>
@@ -102,7 +103,7 @@
 </div>
 <div class="row">
   <a href="{{pathFor route='three'}}">
-    <button class="spacer-top btn indigo waves-effect waves-light" type="submit" name="action">
+    <button class="spacer-top btn grey darken-3 waves-effect waves-light" type="submit" name="action">
       Take me to the finish!
     </button>
   </a>
@@ -132,7 +133,7 @@
 </div>
 <div class="row">
   <a href="{{pathFor route='final'}}">
-    <button class="spacer-top btn indigo waves-effect waves-light" type="submit" name="action">
+    <button class="spacer-top btn grey darken-3 waves-effect waves-light" type="submit" name="action">
       THAT'S IT!
     </button>
   </a>
@@ -145,27 +146,35 @@
 </template>
 
 <template name="final">
-<h1>Et Voilà! Here you go.</h1>
-<h2>Copy, paste and share your self-disclosure.</h2>
+<h1 class="center-align">That's it! Here is your self-disclosure.</h1>
+<h2 class="center-align">Copy, paste and share it!</h2>
 <div class="divider"></div>
-<img src="Group.png" class="spacer-top">
-<div class="spacer-top row">
+<div class="row">
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
-    <span class="description">Binde folgenden Code auf deiner Website ein, um die Grafik anzuzeigen</span>
-    <textarea id="textarea1" class="materialize-textarea">
-      LALALALL
-      {{#each show}}
-        <h1>{{vorname}}</h1>
-        <h2>{{nachname}}</h2>
-        {{email}}
-        {{twitter}}
-      {{/each}}
-    </textarea>
-    <span class="description">Oder kopiere einfach folgenden Text</span>
-    <textarea id="textarea1" class="materialize-textarea">
-      Ich bin Mitglied bei XXX
-    </textarea>
+    <h2 class="center-align">How do you want to share it?</h2>
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header active"><i class="material-icons">short_text</i>Plain Text</div>
+        <div class="collapsible-body">
+          <p><code>here is some nice code to copy</code><br>
+          <a class="btn spacer-top copy" data-clipboard-text="here is some nice code to copy">Copy to Clipboard</a></p>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">picture_in_picture</i>Web Component</div>
+        <div class="collapsible-body">
+          <p><code>here too</code><br>
+          <a class="btn spacer-top copy" data-clipboard-text="here too">Copy to Clipboard</a></p>
+        </div>
+      </li>
+    </ul>
   </div>
+  <div class="input-field col s12 m12 l10 offset-l1 left-align">
+    <h2 class="center-align">And that's how it looks live.</h2>
+    <img src="Group.png" style="width: 100%;">
+  </div>
+</div>
+<div class="row">
   <div class="divider"></div>
   <div class="spacer-big row">
     <div class="col s12 center-align">

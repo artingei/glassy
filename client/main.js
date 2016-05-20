@@ -47,6 +47,19 @@ Template.one.events({
     }
 });
 
+Template.final.events({
+  "click div":function(event, template){
+    template.$('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+  }
+});
+
+Template.final.onRendered(function() {
+    var clipboard = new Clipboard('.copy');
+});
+
+
 //Template.one.events({
 //  'keyup input':function(event) {
 //    alert('a');
