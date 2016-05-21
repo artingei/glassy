@@ -48,7 +48,7 @@ Template.one.events({
 });
 
 Template.final.events({
-  "click div":function(event, template){
+  "click .collapsible-header":function(event, template){
     template.$('.collapsible').collapsible({
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
