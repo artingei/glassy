@@ -2,20 +2,20 @@
 
 body {
   //background: url("back.jpg");
-  @extend .blue-grey;
+  @extend .indigo;
   font-family: 'Fira Sans';
   font-size: 18px;
 }
 
 h1 {
   font-size: 1.25em;
-  margin: 2em 0 .4em;
+  margin: 2em 0 .35em;
 }
 
 h2 {
   font-size: .8em;
   @extend .grey-text;
-  margin-top: .4em;
+  margin-top: .35em;
 }
 
 strong {

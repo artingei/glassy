@@ -36,3 +36,9 @@
 .description {
   font-size: .8em;
 }
+
+// Materialize Fix
+
+.collapsible {
+  box-shadow: none !important;
+}

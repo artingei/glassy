@@ -146,40 +146,46 @@
 </template>
 
 <template name="final">
-<h1 class="center-align">That's it! Here is your self-disclosure.</h1>
-<h2 class="center-align">Copy, paste and share it!</h2>
-<div class="divider"></div>
-<div class="row">
-  <div class="input-field col s12 m12 l10 offset-l1 left-align">
-    <h2 class="center-align">How do you want to share it?</h2>
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header active"><i class="material-icons">short_text</i>Plain Text</div>
-        <div class="collapsible-body">
-          <p><code>here is some nice code to copy</code><br>
-          <a class="btn spacer-top copy" data-clipboard-text="here is some nice code to copy">Copy to Clipboard</a></p>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">picture_in_picture</i>Web Component</div>
-        <div class="collapsible-body">
-          <p><code>here too</code><br>
-          <a class="btn spacer-top copy" data-clipboard-text="here too">Copy to Clipboard</a></p>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="input-field col s12 m12 l10 offset-l1 left-align">
-    <h2 class="center-align">And that's how it looks live.</h2>
-    <img src="Group.png">
-  </div>
-</div>
-<div class="row">
+  <h1 class="center-align">
+    That's it! Here is your self-disclosure.
+  </h1>
+  <h2 class="center-align">Copy, paste and share it!</h2>
   <div class="divider"></div>
-  <div class="spacer-big row">
-    <div class="col s12 center-align">
-      <i class="material-icons">share</i>
+  <div class="row">
+    <div class="input-field col s12 m12 l10 offset-l1 left-align">
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">photo</i>Image</div>
+          <div class="collapsible-body left-align">
+            <div class="center-align">
+              <p style="padding-bottom: 0;"><img src="Group.png"></p>
+            </div>
+            <p><a class="btn copy" data-clipboard-text="here too">Copy to Clipboard</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header active"><i class="material-icons">short_text</i>Plain Text</div>
+          <div class="collapsible-body">
+            <p>Max is journalist and active member @ WWF and founder @ SOCIAL BERLIN. You can found his regular publications @ ZEIT MAGAZIN and @ VIVA. [self-disclosure, 2016]<br>
+            <a class="btn spacer-top copy" data-clipboard-text="here is some nice code to copy">Copy to Clipboard</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">picture_in_picture</i>Web Component</div>
+          <div class="collapsible-body">
+            <p><code>here too</code><br>
+            <a class="btn spacer-top copy" data-clipboard-text="here too">Copy to Clipboard</a></p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
+  <div class="row">
+    <div class="divider"></div>
+    <div class="spacer-big row">
+      <div class="col s12 center-align">
+        <i class="material-icons">share</i>
+      </div>
+    </div>
+  </div>
 </template>
