@@ -55,6 +55,13 @@ Template.final.events({
   }
 });
 
+Template.final.events({
+  "click #publish":function(event, template){
+    alert("Thank you. We sent you a link.")
+  }
+});
+
+
 Template.final.onRendered(function() {
     var clipboard = new Clipboard('.copy');
 });
