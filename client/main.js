@@ -99,4 +99,6 @@ Meteor.startup(function() {
     console.log("async fonts loaded", WebFontConfig);
   })();
 
+  RouterAutoscroll.animationDuration = 600;
+
 })
