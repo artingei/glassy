@@ -31,3 +31,13 @@ strong {
 textarea {
   @extend .grey-text;
 }
+
+// Progress Bar
+#iron-router-progress {
+    background-color : #ffffff;
+    box-shadow       : 0 0 10px rgba(66,66,66,.5);
+}
+
+#iron-router-progress.spinner:before {
+    border-color : #ffffff;
+}

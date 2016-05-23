@@ -24,3 +24,4 @@ poetic:materialize-scss
 iron:router
 ccorcos:transitioner
 perak:codemirror
+multiply:iron-router-progress
