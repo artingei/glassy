@@ -2,7 +2,8 @@
 
 body {
   //background: url("back.jpg");
-  @extend .indigo;
+  //@extend .indigo;
+  background: linear-gradient(42deg, #3F51B5, #00bfa5) center center no-repeat fixed;
   font-family: 'Fira Sans';
   font-size: 18px;
 }
