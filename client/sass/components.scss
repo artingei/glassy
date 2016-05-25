@@ -78,3 +78,19 @@
 [type="checkbox"] + label {
   line-height: 1.5em !important;
 }
+
+// animate.css
+
+.collapsible-header-two {
+  animation-delay: .4s;
+}
+.collapsible-header-three {
+  animation-delay: .8s;
+}
+
+// Progress Bar
+
+.progress {
+  border-radius: 0 !important;
+  height: 2px !important;
+}

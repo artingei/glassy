@@ -11,7 +11,7 @@
     <div class="row">
       <div class="col s4 m4 l8 offset-l2 center-align">
         <a href="{{pathFor route='home'}}">
-          <h1 class="welcome white-text center-align"><img src="logo.svg"></h1>
+          <h1 class="welcome white-text center-align animated fadeIn"><img src="logo.svg"></h1>
         </a>
       </div>
     </div>
@@ -32,9 +32,11 @@
 <template name="one">
 <h1>Personal Information</h1>
 <h2>Just two more steps for your private disclaimer.</h2>
-<div class="divider"></div>
 <form>
   <div class="spacer-top row">
+    <div class="progress grey lighten-2">
+        <div class="determinate indigo accent-2 animated fadeInLeft" style="width: 0%"></div>
+    </div>
     <div class="input-field col s12 m12 l10 offset-l1 left-align">
       <input id="name" type="text" class="validate" required>
       <label for="name">Name</label>
@@ -82,8 +84,10 @@
 <template name="two">
 <h1>Your Connections</h1>
 <h2>Memberships or any other activity which could influence your work.</h2>
-<div class="divider"></div>
 <div class="spacer-top row">
+  <div class="progress grey lighten-2">
+      <div class="determinate indigo accent-2 animated fadeInLeft" style="width: 33%"></div>
+  </div>
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
     <input id="connection_name" type="text" class="validate">
     <label for="connection_name">Name of connection</label>
@@ -103,7 +107,7 @@
 </div>
 <div class="row small">
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
-    <a class="btn-floating grey add"><i class="material-icons">add another connection</i></a>
+    <a class="btn-floating grey darken-1 add"><i class="material-icons">add another connection</i></a>
   </div>
 </div>
 <div class="add_content">
@@ -126,8 +130,10 @@
 <template name="three">
 <h1>Your publications</h1>
 <h2>Where do you publish on the web? (You can leave this blank)</h2>
-<div class="divider"></div>
 <div class="spacer-top row">
+  <div class="progress grey lighten-2">
+      <div class="determinate indigo accent-2 animated fadeInLeft" style="width: 66%"></div>
+  </div>
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
     <input id="last_name" type="text" class="validate">
     <label for="last_name">Name of the publication</label>
@@ -141,7 +147,7 @@
 </div>
 <div class="row small">
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
-    <a class="btn-floating grey add"><i class="material-icons">add another publication</i></a>
+    <a class="btn-floating grey darken-1 add"><i class="material-icons">add another publication</i></a>
   </div>
 </div>
 <div class="add_content">
@@ -166,12 +172,14 @@
     Here is your self-disclosure.
   </h1>
   <h2 class="center-align">Copy, paste and share it!</h2>
-  <div class="divider"></div>
   <div class="row">
+    <div class="progress grey lighten-2">
+        <div class="determinate indigo accent-2 animated fadeInLeft" style="width: 100%"></div>
+    </div>
     <div class="input-field col s12 m12 l10 offset-l1 left-align">
       <ul class="collapsible" data-collapsible="accordion">
         <li>
-          <div class="collapsible-header"><i class="material-icons">photo</i>Image</div>
+          <div class="collapsible-header collapsible-header-one animated fadeIn"><i class="material-icons">photo</i>Image</div>
           <div class="collapsible-body left-align">
             <div class="center-align">
               <p style="padding-bottom: 0;"><img src="Group.png"></p>
@@ -180,14 +188,14 @@
           </div>
         </li>
         <li>
-          <div class="collapsible-header active"><i class="material-icons">short_text</i>Plain Text</div>
+          <div class="collapsible-header collapsible-header-two animated fadeIn"><i class="material-icons">short_text</i>Plain Text</div>
           <div class="collapsible-body">
             <p>Max is journalist and active member @ WWF and founder @ SOCIAL BERLIN. You can found his regular publications @ ZEIT MAGAZIN and @ VIVA. [self-disclosure, 2016]<br>
             <a class="btn spacer-top copy indigo" data-clipboard-text="Max is journalist and active member @ WWF and founder @ SOCIAL BERLIN. You can found his regular publications @ ZEIT MAGAZIN and @ VIVA. [self-disclosure, 2016]">Copy to Clipboard</a></p>
           </div>
         </li>
         <li>
-          <div class="collapsible-header"><i class="material-icons">picture_in_picture</i>Web Component</div>
+          <div class="collapsible-header collapsible-header-three animated fadeIn"><i class="material-icons">picture_in_picture</i>Web Component</div>
           <div class="collapsible-body">
             <p><code>here too</code><br>
             <a class="btn spacer-top copy indigo" data-clipboard-text="here too">Copy to Clipboard</a></p>

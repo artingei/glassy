@@ -27,31 +27,23 @@ Router.configure({
 });
 
 Template.one.events({
-    'submit form': function(){
-      event.preventDefault();
+  'submit form': function(){
+    event.preventDefault();
 
-      var vorname = event.target.first_name.value;
-      var nachname = event.target.last_name.value;
-      var job = event.target.job.value;
-      var email = event.target.email.value;
-      var twitter = event.target.twitter.value;
-      UserData.insert({
-        vorname: vorname,
-        nachname: nachname,
-        job: job,
-        email: email,
-        twitter: twitter
-      });
-
-      Router.go('/two');
-    }
-});
-
-Template.final.events({
-  "click .collapsible-header":function(event, template){
-    template.$('.collapsible').collapsible({
-      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    var vorname = event.target.first_name.value;
+    var nachname = event.target.last_name.value;
+    var job = event.target.job.value;
+    var email = event.target.email.value;
+    var twitter = event.target.twitter.value;
+    UserData.insert({
+      vorname: vorname,
+      nachname: nachname,
+      job: job,
+      email: email,
+      twitter: twitter
     });
+
+    Router.go('/two');
   }
 });
 
@@ -72,6 +64,14 @@ Template.three.events({
 Template.final.events({
   "click #publish":function(event, template){
     alert("Thank you. We sent you a link.")
+  }
+});
+
+Template.final.events({
+  "click .collapsible-header":function(event, template){
+    template.$('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
   }
 });
 
@@ -113,6 +113,6 @@ Meteor.startup(function() {
     console.log("async fonts loaded", WebFontConfig);
   })();
 
-  RouterAutoscroll.animationDuration = 600;
+  RouterAutoscroll.animationDuration = 750;
 
 })
