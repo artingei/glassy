@@ -40,7 +40,7 @@
   font-weight: bold;
   font-size: 2.5em;
   letter-spacing: .2em;
-  margin: 1em 0 .25em;
+  margin: 1.1em 0 .2em;
 }
 
 .main-container {
@@ -69,6 +69,14 @@
 
 .description {
   font-size: .8em;
+}
+
+.btn-flat {
+  font-size: .8em;
+  margin-top: .75em !important;
+  &:focus {
+    background: grey;
+  }
 }
 
 // Materialize Fix

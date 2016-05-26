@@ -22,8 +22,7 @@
     </div>
     <div class="row">
       <div class="subtext grey-text text-lighten-2 col s4 m4 l6 offset-l3 center-align">
-        Glassy provides journalists, bloggers, podcasters and any other people in the
-        digital public the opportunity to publish a self-disclosure quickly and easily.
+        Glassy enables journalists, bloggers and other content creators to publish a self disclosure within seconds. It's an app from the people behind Cahoots. You can find our self disclosure here.
       </div>
     </div>
   </div>
@@ -66,10 +65,15 @@
       <label for="twitter">Twitter (optional)</label>
     </div>
   </div>
+  <div class="row small">
+    <div class="input-field col s12 m12 l10 offset-l1 left-align">
+      <a class="waves-effect waves-light btn grey" id="photo"><i class="material-icons left">photo</i>Take a photo</a>
+    </div>
+  </div>
   <div class="row">
     <a href="{{pathFor route='two'}}">
       <button class="spacer-top btn indigo waves-effect waves-light" type="submit" name="action">
-        Alright, next!
+        Add some connections
       </button>
     </a>
   </div>
@@ -82,7 +86,7 @@
 </template>
 
 <template name="two">
-<h1>Your Connections</h1>
+<h1>Your connections</h1>
 <h2>Memberships or any other activity which could influence your work.</h2>
 <div class="spacer-top row">
   <div class="progress grey lighten-2">
@@ -116,7 +120,10 @@
 <div class="row">
   <a href="{{pathFor route='three'}}">
     <button class="spacer-top btn indigo waves-effect waves-light" type="submit" name="action">
-      Take me to the finish!
+      Provide publications
+    </button><br>
+    <button class="spacer-top btn-flat waves-effect waves-light" type="submit" name="action">
+      or skip this step
     </button>
   </a>
 </div>

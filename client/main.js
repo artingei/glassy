@@ -27,6 +27,19 @@ Router.configure({
 });
 
 Template.one.events({
+  'click #photo': function () {
+      var cameraOptions = {
+        width: 800,
+        height: 600
+      };
+
+      MeteorCamera.getPicture(cameraOptions, function (error, data) {
+        Session.set("photo", data);
+      });
+    }
+});
+
+Template.one.events({
   'submit form': function(){
     event.preventDefault();
 
@@ -44,6 +57,12 @@ Template.one.events({
     });
 
     Router.go('/two');
+  }
+});
+
+Template.one.helpers({
+  photo: function () {
+    return Session.get("photo");
   }
 });
 
