@@ -5,14 +5,14 @@
 <g id="Group" style="mix-blend-mode:normal;" figma:type="group">
 <g id="Rectangle 11" style="mix-blend-mode:multiply;" figma:type="vector">
 <use xlink:href="#path0_fill" transform="translate(4329.75 6109.75)" fill="#2D7BE1" style="mix-blend-mode:normal;"/>
-<animateMotion dur="12s"
-      values="0,0; 0,100; 0,100; 0,0"
+<animateMotion dur="6s"
+      values="0,0; 0,80; 0,100; 0,100; 0,20; 0,0"
       repeatCount="indefinite" />
 </g>
 <g id="Rectangle 11" style="mix-blend-mode:multiply;" figma:type="vector">
 <use xlink:href="#path0_fill" transform="translate(4329.75 6209.75)" fill="#2D7BE1" style="mix-blend-mode:normal;"/>
-<animateMotion dur="12s"
-      values="0,0; 0,-100; 0,-100; 0,0"
+<animateMotion dur="6s"
+      values="0,0;0,-80; 0,-100; 0,-100; 0,-20; 0,0"
       repeatCount="indefinite" />
 </g>
 </g>
