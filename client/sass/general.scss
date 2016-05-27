@@ -2,8 +2,9 @@
 
 body {
   //background: url("back.jpg");
-  //@extend .indigo;
-  background: linear-gradient(42deg, #3F51B5, #00bfa5) center center no-repeat fixed;
+  @extend .grey;
+  @extend .lighten-2;
+  //background: linear-gradient(42deg, #3F51B5, #00bfa5) center center no-repeat fixed;
   font-family: 'Fira Sans';
   font-size: 18px;
 }
@@ -39,10 +40,10 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 // Progress Bar
 #iron-router-progress {
-    background-color : #ffffff;
+    background-color : #2D7BE1;
     box-shadow       : 0 0 10px rgba(66,66,66,.5);
 }
 
 #iron-router-progress.spinner:before {
-    border-color : #ffffff;
+    border-color : #2D7BE1;
 }
