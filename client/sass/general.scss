@@ -38,6 +38,14 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   height: 2.8rem !important;
 }
 
+.tab a {
+  color: #212121 !important;
+}
+
+.tabs .indicator {
+  background: #1a237e !important;
+}
+
 // Progress Bar
 #iron-router-progress {
     background-color : #2D7BE1;

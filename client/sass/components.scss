@@ -138,3 +138,22 @@
   border-radius: 0 !important;
   height: 1px !important;
 }
+
+// Tooltips
+
+.tooltip {
+  z-index: 1001;
+  pointer-events: none;
+  transition: opacity .5s ease-out;
+  opacity: 0;
+  font-size: .8em;
+  color: #616161;
+}
+
+.tooltip.hide {
+  opacity: 0;
+}
+
+.tooltip.show {
+  opacity: 1;
+}

@@ -99,6 +99,7 @@ Template.final.events({
 
 Template.final.onRendered(function() {
     var clipboard = new Clipboard('.copy');
+    $('ul.tabs').tabs();
 });
 
 

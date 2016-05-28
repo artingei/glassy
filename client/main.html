@@ -71,7 +71,7 @@
     <div class="input-field col s12 m12 l10 offset-l1 left-align">
       <form action="#">
         <div class="file-field input-field">
-          <div class="btn">
+          <div class="btn grey">
             <span>Upload a photo</span>
             <input type="file">
           </div>
@@ -183,38 +183,45 @@
     Here is your self-disclosure.
   </h1>
   <h2 class="center-align">Copy, paste and share it!</h2>
+  <div class="col s12 m12 l10 offset-l1 left-align">
+    <ul class="tabs grey lighten-4">
+      <li class="tab col s4"><a href="#small">Small</a></li>
+      <li class="tab col s4"><a class="active" href="#medium">Medium</a></li>
+      <li class="tab col s4"><a href="#large">Large</a></li>
+    </ul>
+  </div>
   <div class="row">
     <div class="progress grey lighten-2">
-        <div class="determinate grey darken-1 animated fadeInLeft" style="width: 100%"></div>
+        <div class="determinate indigo animated fadeInLeft" style="width: 100%"></div>
     </div>
-    <div class="col s12 m12 l10 offset-l1 left-align spacer-top">
-      <ul class="collapsible animated fadeIn" data-collapsible="accordion">
-        <li>
-          <div class="collapsible-header collapsible-header-one animated fadeIn"><i class="material-icons">photo</i>Image</div>
-          <div class="collapsible-body left-align">
-            <div class="center-align">
-              <p style="padding-bottom: 0;"><img src="Group.png"></p>
-            </div>
-            <p><a class="btn copy indigo" data-clipboard-text="photo url?">Copy to Clipboard</a></p>
-          </div>
-        </li>
-        <li>
-          <div class="collapsible-header collapsible-header-two animated fadeIn"><i class="material-icons">short_text</i>Plain Text</div>
-          <div class="collapsible-body">
-            <p>Max is journalist and active member @ WWF and founder @ SOCIAL BERLIN. You can found his regular publications @ ZEIT MAGAZIN and @ VIVA. [self-disclosure, 2016]<br>
-            <a class="btn spacer-top copy indigo" data-clipboard-text="Max is journalist and active member @ WWF and founder @ SOCIAL BERLIN. You can found his regular publications @ ZEIT MAGAZIN and @ VIVA. [self-disclosure, 2016]">Copy to Clipboard</a></p>
-          </div>
-        </li>
-        <li>
-          <div class="collapsible-header collapsible-header-three animated fadeIn"><i class="material-icons">picture_in_picture</i>Web Component</div>
-          <div class="collapsible-body">
-            <p><code>here too</code><br>
-            <a class="btn spacer-top copy indigo" data-clipboard-text="here too">Copy to Clipboard</a></p>
-          </div>
-        </li>
-      </ul>
+
+    <div id="small" class="col s12">
+      <div class="col s12 m12 l4">
+        <a class="waves-effect waves-light indigo btn"><i class="material-icons left">photo</i>Image</a>
+      </div>
+      <div class="col s12 m12 l4">
+        <a class="waves-effect waves-light indigo btn"><i class="material-icons left">picture_in_picture</i>Embeded</a>
+      </div>
+      <div class="col s12 m12 l4">
+        <a class="waves-effect waves-light indigo btn copy" data-clipboard-text="Max is journalist and active member @ WWF and founder @ SOCIAL BERLIN. You can found his regular publications @ ZEIT MAGAZIN and @ VIVA. [self-disclosure, 2016]"><i class="material-icons left">short_text</i>Text</a>
+      </div>
     </div>
-    <div class="col s12 m12 l10 offset-l1 left-align">
+    <div id="medium" class="col s12">
+      <div class="col s12 m12 l4">
+        <a class="waves-effect waves-light indigo btn" data-tooltip="copy url to clipboard" data-tooltip-top="-65" ><i class="material-icons left">photo</i>Image</a>
+      </div>
+      <div class="col s12 m12 l4">
+        <a class="waves-effect waves-light indigo btn" data-tooltip="copy code to clipboard" data-tooltip-top="-65"><i class="material-icons left">picture_in_picture</i>Embeded</a>
+      </div>
+      <div class="col s12 m12 l4">
+        <a class="waves-effect waves-light indigo btn copy" data-tooltip="copy text to clipboard" data-tooltip-top="-65" data-clipboard-text="Max is journalist and active member @ WWF and founder @ SOCIAL BERLIN. You can found his regular publications @ ZEIT MAGAZIN and @ VIVA. [self-disclosure, 2016]"><i class="material-icons left">short_text</i>Text</a>
+      </div>
+    {{ > tooltips }}
+    </div>
+    <div id="large" class="col s12">
+
+    </div>
+    <div class="col s12 m12 l8 offset-l2 center-align spacer-top">
       <p>
         <input type="checkbox" class="filled-in" id="publish" />
         <label for="publish">I would like to publish my self-disclosure. <br>(You can edit or delete your data anytime.)</label>

@@ -47,6 +47,7 @@ launch-screen@1.0.11
 less@2.6.0
 livedata@1.0.18
 logging@1.0.12
+lookback:tooltips@0.5.2
 mdg:camera@1.4.1
 meteor@1.1.14
 meteor-base@1.0.4
