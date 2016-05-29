@@ -69,7 +69,7 @@ Template.one.helpers({
 Template.two.events({
   "click .add":function(event, template){
     template.$('.add').remove()
-    template.$('.add_content').append( $( "<div class='spacer-top row animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <input id='connection_name' type='text' class='validate'> <label for='connection_name'>Name of connection</label> </div> </div> <div class='row small animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <input id='connection_type' type='text' class='validate'> <label for='connection_type'>Type of connection</label> </div> </div> <div class='row small animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <input id='connection_website' type='url' class='validate'><label for='connection_website'>Links</label></div></div><div class='row small animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <a class='btn-floating grey add'><i class='material-icons'>add another connection</i></a> </div> </div>" ) )
+    template.$('.add_content').append( $( "<div class='spacer-top row animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <input id='connection_name' type='text' class='validate'> <label for='connection_name'>Name of connection</label> </div> </div> <div class='row small animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <input id='connection_type' type='text' class='validate'> <label for='connection_type'>Type of connection</label> </div> </div> <div class='row small animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <input id='connection_website' type='url' class='validate'><label for='connection_website'>Link</label></div></div><div class='row small animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <a class='btn-floating grey add'><i class='material-icons'>add another connection</i></a> </div> </div>" ) )
     window.scrollBy(0, 261)
   }
 });
@@ -77,14 +77,14 @@ Template.two.events({
 Template.three.events({
   "click .add":function(event, template){
     template.$('.add').remove()
-    template.$('.add_content').append( $( "<div class='spacer-top row animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <input id='publication_name' type='text' class='validate'> <label for='publication_name'>Name of connection</label> </div> </div> <div class='row small animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <input id='publication_website' type='url' class='validate'><label for='publication_website'>Links</label></div></div><div class='row small animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <a class='btn-floating grey add'><i class='material-icons'>add another publication</i></a> </div> </div>" ) )
+    template.$('.add_content').append( $( "<div class='spacer-top row animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <input id='publication_name' type='text' class='validate'> <label for='publication_name'>Name of publication</label> </div> </div> <div class='row small animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <input id='publication_website' type='url' class='validate'><label for='publication_website'>Link</label></div></div><div class='row small animated fadeInDown'> <div class='input-field col s12 m12 l10 offset-l1 left-align'> <a class='btn-floating grey add'><i class='material-icons'>add another publication</i></a> </div> </div>" ) )
     window.scrollBy(0, 261)
   }
 });
 
 Template.final.events({
   "click #publish":function(event, template){
-    alert("Thank you. We sent you a link.")
+      template.$( ".link-inputs" ).toggle( 250 );
   }
 });
 
@@ -96,12 +96,11 @@ Template.final.events({
   }
 });
 
-
 Template.final.onRendered(function() {
     var clipboard = new Clipboard('.copy');
     $('ul.tabs').tabs();
+    this.$( ".link-inputs" ).hide( 250 );
 });
-
 
 //Template.one.events({
 //  'keyup input':function(event) {

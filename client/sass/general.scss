@@ -47,6 +47,10 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   background: #1a237e !important;
 }
 
+.link-inputs {
+//  visibility: hidden;
+}
+
 // Progress Bar
 #iron-router-progress {
     background-color : #2D7BE1;

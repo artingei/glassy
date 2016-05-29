@@ -118,7 +118,7 @@
 <div class="row small">
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
     <input id="connection_website" type="url" class="validate">
-    <label for="connection_website">Links</label>
+    <label for="connection_website">Link</label>
   </div>
 </div>
 <div class="row small">
@@ -152,7 +152,7 @@
   </div>
   <div class="input-field col s12 m12 l10 offset-l1 left-align">
     <input id="last_name" type="text" class="validate">
-    <label for="last_name">Name of the publication</label>
+    <label for="last_name">Name of publication</label>
   </div>
 </div>
 <div class="row small">
@@ -222,10 +222,21 @@
         <a class="waves-effect waves-light indigo darken-1 btn copy" data-clipboard-text="Max is journalist and active member @ WWF and founder @ SOCIAL BERLIN. You can found his regular publications @ ZEIT MAGAZIN and @ VIVA. [self-disclosure, 2016]"><i class="material-icons left">short_text</i>Text only</a>
     {{ > tooltips }}
     </div>
-    <div class="col s12 m12 l8 offset-l2 center-align spacer-top">
+    <div class="col s12 m12 l8 offset-l2 center-align spacer-top-big">
       <p>
         <input type="checkbox" class="filled-in" id="publish" />
-        <label for="publish">I would like to publish my self-disclosure. <br>(You can edit or delete your data anytime.)</label>
+        <label for="publish">I would like to publish my self-disclosure. <br>(Creates an URL to your self-disclosure.)</label>
+      </p>
+    </div>
+    <div class="divider"></div>
+    <div class="col s12 m12 l8 offset-l2 center-align link-inputs animated fadeIn">
+      <p>
+          <input id="connection_website" value="http://glassy.io/83k0lrT" type="url" class="center-align share-link">
+          <label for="connection_website">This is the link to your self-disclosure.</label>
+      </p>
+      <p>
+          <input id="connection_website" value="http://glassy.io/edit/3KllM3jIo93ExB" type="url" class="center-align edit-link spacer-top">
+          <label for="connection_website">This is the link to edit your information. Keep it save.</label>
       </p>
     </div>
   </div>
