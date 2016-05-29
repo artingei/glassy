@@ -18,7 +18,7 @@ h2 {
   font-size: .8em;
   @extend .grey-text;
   margin: .25em 0 1.75em;
-  line-height: 1.25em;
+  line-height: 1.35em;
 }
 
 strong {
@@ -59,4 +59,6 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 #iron-router-progress.spinner:before {
     border-color : #2D7BE1;
+    width: 36px;
+    height: 36px;
 }
