@@ -26,7 +26,9 @@ Router.configure({
     layoutTemplate: 'main'
 });
 
-Template.one.events({
+// Camera stuff is obsolete for the moment
+
+/*Template.one.events({
   'click #photo': function () {
       var cameraOptions = {
         width: 800,
@@ -37,25 +39,24 @@ Template.one.events({
         Session.set("photo", data);
       });
     }
-});
+});*/
 
 Template.one.events({
-  'submit form': function(){
+  'submit form': function(event, template) {
     event.preventDefault();
 
-    var vorname = event.target.first_name.value;
-    var nachname = event.target.last_name.value;
-    var job = event.target.job.value;
-    var email = event.target.email.value;
-    var twitter = event.target.twitter.value;
+    /*const vorname = event.target.first_name.value;
+    const nachname = event.target.last_name.value;
+    const job = event.target.job.value;
+    const email = event.target.email.value;
+    const twitter = event.target.twitter.value;
     UserData.insert({
       vorname: vorname,
       nachname: nachname,
       job: job,
       email: email,
       twitter: twitter
-    });
-
+    });*/
     Router.go('/two');
   }
 });
@@ -151,7 +152,7 @@ ShareIt.configure({
                           // The classes that will be placed on the sharing buttons, bootstrap by default.
     iconOnly: true,      // boolean (default: false)
                           // Don't put text on the sharing buttons
-    applyColors: true,     // boolean (default: true)
+    applyColors: false,     // boolean (default: true)
                           // apply classes to inherit each social networks background color
     faSize: '',            // font awesome size
     faClass: ''		  // font awesome classes like square
